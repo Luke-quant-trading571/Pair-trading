@@ -16,9 +16,10 @@ The framework is architected with strict point-in-time data integrity (zero look
 
 ### 1. Cointegration & The Law of One Price
 
-Large-cap Chinese state-owned banks share near-identical macroeconomic exposures, credit quality fundamentals, and regulatory oversight under the National Financial Regulatory Administration (NFRA). While individual log-price series $\ln(\text{Price}_{\text{CCB}})$ and $\ln(\text{Price}_{\text{ICBC}})$ are non-stationary unit-root processes $I(1)$, their linear combination constitutes an $I(0)$ mean-reverting spread:
+Large-cap Chinese state-owned banks share near-identical macroeconomic exposures, credit quality fundamentals, and regulatory oversight under the National Financial Regulatory Administration (NFRA). While the individual log-price series of CCB and ICBC are non-stationary unit-root processes $I(1)$, their linear combination constitutes an $I(0)$ mean-reverting spread:
 
 $$\text{Spread}_t = \ln(\text{Price}_{\text{CCB}, t}) - [\beta_t \cdot \ln(\text{Price}_{\text{ICBC}, t})] - \alpha_t$$
+
 
 
 
