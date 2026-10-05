@@ -21,6 +21,7 @@ Large-cap Chinese state-owned banks share near-identical macroeconomic exposures
 $$\text{Spread}_t = \ln(\text{Price}_{\text{CCB}, t}) - [\beta_t \cdot \ln(\text{Price}_{\text{ICBC}, t})] - \alpha_t$$
 
 
+
 ### 2. Time-Varying Beta & Dynamic Rolling OLS
 Rather than assuming a constant cointegrating vector over multi-year horizons, the hedge ratio $\beta_t$ is estimated using a rolling in-sample window (e.g., 126, 252, or 504 trading days) to capture structural balance sheet shifts:
 
