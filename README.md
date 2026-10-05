@@ -32,15 +32,14 @@ $$\min_{\alpha, \beta} \sum_{i = t - k}^{t - 1} \left[ \ln(\text{Price}_{\text{C
 
 ### 1. Normalized Z-Score Signal
 
-$$Z_t = \frac{\text{Spread}_t - \text{Rolling\_Mean}_{t-1, w}}{\text{Rolling\_Std}_{t-1, w}}$$
+$$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
 
 * **Entry Thresholds**:
-  * **Long Spread**: $Z_{t-1} < -\text{Entry\_Threshold}$ (Buy CCB, Short ICBC)
-  * **Short Spread**: $Z_{t-1} > \text{Entry\_Threshold}$ (Short CCB, Buy ICBC)
+  * **Long Spread**: `Z(t-1) < -Entry_Threshold` (Buy CCB, Short ICBC)
+  * **Short Spread**: `Z(t-1) > Entry_Threshold` (Short CCB, Buy ICBC)
 * **Exit / Stop-Loss Rules**:
-  * **Convergence Exit**: $|Z_t| \le \text{Exit\_Threshold}$ (Spread converges to historical mean)
-  * **Stop-Loss**: $|Z_t| > \text{Stop\_Loss\_Threshold}$ (Protects against structural cointegration breakdown)
-
+  * **Convergence Exit**: `|Z(t)| <= Exit_Threshold` (Spread converges to historical mean)
+  * **Stop-Loss**: `|Z(t)| > Stop_Loss_Threshold` (Protects against structural cointegration breakdown)
 
 ---
 
