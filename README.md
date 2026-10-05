@@ -50,33 +50,33 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
 ## Engine Architecture & Performance Optimization
 
 ```text
-               +---------------------------+
-               |  Historical OHLCV Data    |
-               |        (yfinance)         |
-               +-------------+-------------+
-                             |
-                             v
-               +---------------------------+
-               | Vectorized Feature Eng.   |
-               | (Rolling OLS, Z-Scores)   |
-               +-------------+-------------+
-                             |
-        +--------------------+--------------------+
-        | Multiprocessing Grid Search Engine      |
-        | (Multi-Core Parallel Parameter Space)   |
-        +--------------------+--------------------+
-                             |
-                             v
-               +---------------------------+
-               | Realistic Simulation      |
-               | (Lot Size, Fees, Equity)  |
-               +-------------+-------------+
-                             |
-                             v
-               +---------------------------+
-               | Analytics & Dash Report   |
-               |   (Plotguy / Plotly)      |
-               +---------------------------+
+                    +---------------------------+
+                    |  Historical OHLCV Data    |
+                    |        (yfinance)         |
+                    +-------------+-------------+
+                                  |
+                                  v
+                    +---------------------------+
+                    | Vectorized Feature Eng.   |
+                    | (Rolling OLS, Z-Scores)   |
+                    +-------------+-------------+
+                                  |
+             +--------------------+--------------------+
+             | Multiprocessing Grid Search Engine      |
+             | (Multi-Core Parallel Parameter Space)   |
+             +--------------------+--------------------+
+                                  |
+                                  v
+                    +---------------------------+
+                    | Realistic Simulation      |
+                    | (Lot Size, Fees, Equity)  |
+                    +-------------+-------------+
+                                  |
+                                  v
+                    +---------------------------+
+                    | Analytics & Dash Report   |
+                    |   (Plotguy / Plotly)      |
+                    +---------------------------+
 
 ```
 ![Top Sharpe Ratio Parameter Grid](assets/dash_sharpe_grid.jpg)
