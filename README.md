@@ -1,5 +1,3 @@
-# Pair-trading
-
 # Quantitative Pairs Trading & Dynamic Cointegration Engine for HK Equities
 > A systematic, event-driven statistical arbitrage framework incorporating dynamic rolling OLS hedge ratios, realistic lot-size constraints, and transaction cost modeling.
 
@@ -51,7 +49,7 @@ Rather than assuming a constant cointegrating vector over multi-year horizons, t
 
                +---------------------------+
                |  Historical OHLCV Data    |
-               | (yfiannce / other API)   |
+               |        (yfinance )        |
                +-------------+-------------+
                              |
                              v
@@ -60,10 +58,10 @@ Rather than assuming a constant cointegrating vector over multi-year horizons, t
                | (Rolling OLS, Z-Scores)   |
                +-------------+-------------+
                              |
-         +-------------------+-------------------+
-         | Multiprocessing Grid Search Engine     |
-         | (Muti-Core Parallel Parameter Permutator)|
-         +-------------------+-------------------+
+      +----------------------+----------------------+
+      |    Multiprocessing Grid Search Engine       |
+      | (Multi-Core Parallel Parameter Permutator)  |
+      +----------------------+----------------------+
                              |
                              v
                +---------------------------+
@@ -74,10 +72,10 @@ Rather than assuming a constant cointegrating vector over multi-year horizons, t
                              v
                +---------------------------+
                | Analytics & Dash Report   |
-               | (Plotguy Tear Sheet)      |
+               |   (Plotguy Tear Sheet)    |
                +---------------------------+
 
-* Grid Search Scalability: Utilizes Python `multiprocessing.Pool` across 16 CPU cores, evaluating over 8,640 discrete parameter combinations across window lengths, entry/exit thresholds, and stop-loss levels.
+* Grid Search Scalability: Utilizes Python `multiprocessing.Pool` across Multi-Core, evaluating over 8,640 discrete parameter combinations across window lengths, entry/exit thresholds, and stop-loss levels.
 * Storage Efficiency: Intermediate vectorized matrices serialized via Apache Parquet for high-throughput I/O.
 
 ---
@@ -100,18 +98,19 @@ Rather than assuming a constant cointegrating vector over multi-year horizons, t
 ---
 
 ## Tech Stack & Dependencies
-* Core Analytics: Python 3.9+, pandas, numpy, statsmodels
+* Core Analytics: Python 3.11, pandas, numpy, statsmodels
 * Concurrency: multiprocessing
-* Data Layer: pyarrow (Parquet storage), Futu OpenD API, HKFDB
-* Visualization & Reporting: plotguy, dash, matplotlib
+* Data Layer: pyarrow (Parquet storage), yfinance
+* Visualization & Reporting: plotguy, plotly
 
 ---
 
-## Author & Academic Profile
-* Author: [Your Full Name]
-* Education: Associate of Economics, HKU SPACE Community College (Year 1 cGPA: 3.57)
-* Professional Certifications:
-  - Certificate for Module in Computational Finance & Quantitative Investing (HKU SPACE, Grade A)
+## Author & Contact
+
+* **Developer**: Tang Lai Chung
+* **Background**: Economics & Quantitative Finance Enthusiast
+* **Affiliation**: HKU SPACE Community College (Associate of Economics)
+* **Certifications**: 
+  - Certificate for Module in Computational Finance & Quantitative Investing (Grade A)
   - Advanced Diploma in Finance (Investment)
   - Certificate in Program Trading Techniques (HKPTRC)
-* Target Programs: Senior Year Entry (Non-JUPAS) at PolyU (AMA ISFA/QFFT), CityU (Business Analysis/Finance), HKBU (Applied Econ/Finance).
