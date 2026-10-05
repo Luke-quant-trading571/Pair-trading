@@ -15,9 +15,11 @@ The framework is architected with strict point-in-time data integrity (zero look
 ## Theoretical Framework & Research Hypothesis
 
 ### 1. Cointegration & The Law of One Price
+
 Large-cap Chinese state-owned banks share near-identical macroeconomic exposures, credit quality fundamentals, and regulatory oversight under the National Financial Regulatory Administration (NFRA). While individual log-price series $\ln(\text{Price}_{\text{CCB}})$ and $\ln(\text{Price}_{\text{ICBC}})$ are non-stationary unit-root processes $I(1)$, their linear combination constitutes an $I(0)$ mean-reverting spread:
 
 $$\text{Spread}_t = \ln(\text{Price}_{\text{CCB}, t}) - [\beta_t \cdot \ln(\text{Price}_{\text{ICBC}, t})] - \alpha_t$$
+
 
 ### 2. Time-Varying Beta & Dynamic Rolling OLS
 Rather than assuming a constant cointegrating vector over multi-year horizons, the hedge ratio $\beta_t$ is estimated using a rolling in-sample window (e.g., 126, 252, or 504 trading days) to capture structural balance sheet shifts:
