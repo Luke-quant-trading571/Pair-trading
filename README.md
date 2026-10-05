@@ -31,18 +31,16 @@ $$\min_{\alpha, \beta} \sum_{i = t - k}^{t - 1} \left[ \ln(\text{Price}_{\text{C
 ## Strategy Logic & Microstructure Modeling
 
 ### 1. Normalized Z-Score Signal
+
 $$Z_t = \frac{\text{Spread}_t - \text{Rolling\_Mean}_{t-1, w}}{\text{Rolling\_Std}_{t-1, w}}$$
 
 * **Entry Thresholds**:
-  - **Long Spread**: $Z_{t-1} < -\text{Entry\_Threshold}$ (Buy CCB, Short ICBC)
-  - **Short Spread**: $Z_{t-1} > \text{Entry\_Threshold}$ (Short CCB, Buy ICBC)
+  * **Long Spread**: $Z_{t-1} < -\text{Entry\_Threshold}$ (Buy CCB, Short ICBC)
+  * **Short Spread**: $Z_{t-1} > \text{Entry\_Threshold}$ (Short CCB, Buy ICBC)
 * **Exit / Stop-Loss Rules**:
-  - **Convergence Exit**: $|Z_t| \le \text{Exit\_Threshold}$ (Spread converges to historical mean)
-  - **Stop-Loss**: $|Z_t| > \text{Stop\_Loss\_Threshold}$ (Protects against structural cointegration breakdown)
+  * **Convergence Exit**: $|Z_t| \le \text{Exit\_Threshold}$ (Spread converges to historical mean)
+  * **Stop-Loss**: $|Z_t| > \text{Stop\_Loss\_Threshold}$ (Protects against structural cointegration breakdown)
 
-### 2. Real-World Execution Constraints
-* **Board Lot Quantization**: Order quantities are floored to standard integer lot sizes (e.g., `lot_size = 1,000` shares) via integer division (`//`).
-* **Transaction Cost Modeling**: Modeled with 0.03% ad-valorem commission, HKD 3 minimum brokerage fee, HKD 15 exchange platform charge per round-trip, and an annualized 1.5% borrow fee on short positions.
 
 ---
 
