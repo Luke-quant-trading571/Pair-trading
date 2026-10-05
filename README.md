@@ -57,6 +57,12 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
                                   |
                                   v
                     +---------------------------+
+                    | Realistic Simulation      |
+                    | (Lot Size, Fees, Equity)  |
+                    +-------------+-------------+
+                                  |
+                                  v
+                    +---------------------------+
                     | Vectorized Feature Eng.   |
                     | (Rolling OLS, Z-Scores)   |
                     +-------------+-------------+
@@ -65,12 +71,6 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
              | Multiprocessing Grid Search Engine      |
              | (Multi-Core Parallel Parameter Space)   |
              +--------------------+--------------------+
-                                  |
-                                  v
-                    +---------------------------+
-                    | Realistic Simulation      |
-                    | (Lot Size, Fees, Equity)  |
-                    +-------------+-------------+
                                   |
                                   v
                     +---------------------------+
