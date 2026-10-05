@@ -77,3 +77,7 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
                | Analytics & Dash Report   |
                |   (Plotguy / Plotly)      |
                +---------------------------+
+
+```
+![Top Sharpe Ratio Parameter Grid](assets/dash_sharpe_grid.jpg)
+![Trade Telemetry Tear Sheet](assets/plotguy_trade_tearsheet.jpg)
