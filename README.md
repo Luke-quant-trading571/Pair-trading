@@ -67,6 +67,7 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
                     | (Rolling OLS, Z-Scores)   |
                     +-------------+-------------+
                                   |
+                                  v
              +--------------------+--------------------+
              | Multiprocessing Grid Search Engine      |
              | (Multi-Core Parallel Parameter Space)   |
