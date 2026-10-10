@@ -1,0 +1,6 @@
+futu-api==10.10.7008
+numpy==1.26.4
+plotguy==1.2.13
+requests==2.34.2
+statsmodels==0.14.6
+yfinance==1.5.1
