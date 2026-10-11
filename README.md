@@ -39,8 +39,8 @@ $$\min_{\alpha, \beta} \sum_{i = t - k}^{t - 1} \left[ \ln(\text{Price}_{\text{C
 $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
 
 * **Entry Thresholds**:
-  * **Long Spread**: `Z(t-1) < -Entry_Threshold` (Buy CCB, Short ICBC)
-  * **Short Spread**: `Z(t-1) > Entry_Threshold` (Short CCB, Buy ICBC)
+  * **Long Spread**: `Z(t-1) < -Entry_Threshold` (Buy ICBC)
+  * **Short Spread**: `Z(t-1) > Entry_Threshold` (Short ICBC)
 * **Exit / Stop-Loss Rules**:
   * **Convergence Exit**: `|Z(t)| <= Exit_Threshold` (Spread converges to historical mean)
   * **Stop-Loss**: `|Z(t)| > Stop_Loss_Threshold` (Protects against structural cointegration breakdown)
