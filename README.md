@@ -80,33 +80,36 @@ $$Z_t = \frac{\text{Spread}_t - \mu_{t-1, w}}{\sigma_{t-1, w}}$$
 ```
 
 ![Top Sharpe Ratio Parameter Grid](assets/dash_sharpe_grid.jpg)
-*(Figure 1: Sensitivity analysis across Top 30 Sharpe configurations on SEHK: 0939.HK vs 1398.HK)*
+*(Figure 1: Sensitivity analysis across Top 30 Sharpe configurations on PEP vs KO)*
 
 ![Trade Telemetry Tear Sheet](assets/plotguy_trade_tearsheet.jpg)
 *(Figure 2: Granular trade attribution, execution telemetry, and MFE/MAE excursion diagnostics)*
 
 ---
 
-## Backtesting Analytics & Diagnostics (2023–2025)
+### Backtesting Analytics & Diagnostics (2024–2025)
+Key Insights
+Risk-Adjusted Discipline: Parameter selection is prioritized by Top 30 Sharpe Ratio with anti-overfitting filters (Win Rate < 100%, Trades < 15) to eliminate curve-fitting and statistical artifacts.
 
-### Key Insights
-* **Risk-Adjusted Discipline**: Parameter selection is prioritized by **Top 30 Sharpe Ratio** with anti-overfitting filters (`Win Rate < 100%`, `Trades < 20`) to eliminate look-ahead anomalies.
-* **Downside Protection**: Slashes Maximum Drawdown from **22.0% (HKD 25,141)** down to **7.0% (HKD 8,291)**—a **68.2% reduction in tail risk**—while lowering volatility from 27% to 16%.
-* **Microstructure Realism**: Achieves **75.0% Win Rate (6W / 2L)** and **HKD 26,767 Net Profit** (Net Profit / MDD = 3.23) strictly **net of HKD 786 fees** and compliant with HKEx 1,000 board lot constraints.
+Capital Protection & Downside Dampening: Slashes Maximum Drawdown from 28.0% (29,364)** down to **9.0% (10,389)—a 64.6% reduction in tail risk—while cutting annualized volatility in half from 24% to 12%.
 
+Alpha Generation vs. Benchmark: Delivers 23.0% Return on Capital (+34% outperformance vs. Buy & Hold at -11%) with 56.0% Win Rate (5W / 4L) and 22,654 Net Profit** (Net Profit / MDD = 2.18) strictly net of **813 in transaction commissions.
 ---
 
 ### Performance Attribution
 
-| Metric (2023–2025) | Strategy (0939 vs 1398) | Buy & Hold Benchmark | Advantage / Takeaway |
+| Metric (2024–2025) | Strategy (PEP vs KO) | Buy & Hold Benchmark | Advantage / Takeaway |
 | :--- | :---: | :---: | :--- |
 | **Optimization Target** | **Top 30 Sharpe Ratio** | Market Exposure | Risk-Adjusted Allocation |
-| **Total Net Profit** | **HKD 26,767** | HKD 54,000 (Eq.) | Market-Neutral Alpha |
-| **Win Rate** | **75.0% (6W / 2L)** | N/A | Non-P-Hacked Conviction |
-| **Annualized Volatility** | **16.0%** | 27.0% | **-40.7% Risk Dampening** |
-| **Maximum Drawdown (MDD)** | **7.0% (HKD 8,291)** | 22.0% (HKD 25,141) | **-68.2% Downside Protection** |
-| **Net Profit / MDD Ratio** | **3.23** | 2.15 | **+50.2% Capital Efficiency** |
-| **Transaction Friction** | **HKD 786 (Deducted)** | Nil | Realistic Brokerage & HKEx Fees |
+| **Return on Capital** | **23.0%** | -11.0% | **+34.0% Alpha Spread** |
+| **Annualized Return** | **11.0%** | -6.0% | **+17.0% Outperformance** |
+| **Annualized Volatility (Std)** | **12.0%** | 24.0% | **-50.0% Risk Dampening** |
+| **Annualized Sharpe Ratio** | **0.55** | -0.41 | **+0.96 Risk-Adjusted Edge** |
+| **Maximum Drawdown (MDD)** | **9.0% ($10,389)** | 28.0% ($29,364) | **-64.6% Downside Protection** |
+| **Total Net Profit** | **$22,654** | -$11,000 (Eq.) | Market-Neutral Alpha |
+| **Net Profit / MDD Ratio** | **2.18** | N/A | Strong Capital Efficiency |
+| **Win Rate** | **56.0% (5W / 4L)** | N/A | Non-P-Hacked Conviction (9 Trades) |
+| **Transaction Friction** | **$813 (Deducted)** | Nil | Realistic Commission Modeling |
 
 ---
 
