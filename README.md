@@ -94,6 +94,7 @@ Risk-Adjusted Discipline: Parameter selection is prioritized by Top 30 Sharpe Ra
 Capital Protection & Downside Dampening: Slashes Maximum Drawdown from 28.0% (29,364)** down to **9.0% (10,389)—a 64.6% reduction in tail risk—while cutting annualized volatility in half from 24% to 12%.
 
 Alpha Generation vs. Benchmark: Delivers 23.0% Return on Capital (+34% outperformance vs. Buy & Hold at -11%) with 56.0% Win Rate (5W / 4L) and 22,654 Net Profit** (Net Profit / MDD = 2.18) strictly net of **813 in transaction commissions.
+
 ---
 
 ### Performance Attribution
