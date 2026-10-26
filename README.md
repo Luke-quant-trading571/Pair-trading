@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-This project implements an institutional-grade Statistical Arbitrage & Pairs Trading backtesting framework. Focusing on structurally cointegrated consumer staples giants—PepsiCo (PEP) and The Coca-Cola Company (KO)—the engine evaluates mean-reversion anomalies across rolling econometric regimes.
+This project implements an institutional-grade Statistical Arbitrage & Pairs Trading backtesting framework. Focusing on structurally cointegrated consumer staples giants PepsiCo (PEP) and The Coca-Cola Company (KO) the engine evaluates mean-reversion anomalies across rolling econometric regimes.
 
 The framework is architected with strict point-in-time data integrity (zero look-ahead bias), realistic exchange execution microstructure (transaction fee modeling), and parallelized parameter space exploration via Python multiprocessing.
 
