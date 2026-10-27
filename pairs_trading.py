@@ -197,30 +197,7 @@ def get_all_para_combination(
         code = para_combination['code']
         df = df_dict[code]
         combined_dict = {**df_dict, **benchmark_df_dict}
-
-
-    #     benchmark_code   = para_combination['benchmark_code']
-    #     benchmark_df     = benchmark_df_dict[benchmark_code]
-    #
-    #     df_renamed = df.rename(columns={col: f"{code}_{col}" for col in df.columns if col != 'date'})
-    #
-    #     benchmark_renamed = benchmark_df.rename(
-    #         columns={col: f"{benchmark_code}_{col}" for col in benchmark_df.columns if col != 'date'})
-    #
-    #
-    #     merged_df = pd.merge(df_renamed, benchmark_renamed, on='date')
-    #
-    #     # Rename stock columns to generic names for easier access
-    #     merged_df.rename(columns={
-    #         f'{code}_open': 'open',
-    #         f'{code}_high': 'high',
-    #         f'{code}_low': 'low',
-    #         f'{code}_close': 'close',
-    #         f'{code}_volume': 'volume',
-    #         f'{code}_pct_change': 'pct_change'  # if you use it later
-    #     }, inplace=True)
-
-
+        
         merged_df = pd.concat(combined_dict, axis=1)
         merged_df = merged_df.dropna().copy()
         merged_df.columns = [f"{c[0]}_{c[1]}" for c in merged_df.columns]
