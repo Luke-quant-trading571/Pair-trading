@@ -1,20 +1,14 @@
 import plotguy
-import hkfdb
 import yfinance as yf
 
-import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 
 import datetime
-import time
 
-import sys
-import os
 import itertools
 import multiprocessing as mp
 
-import pandas_ta_classic as ta
 import random
 
 import warnings
@@ -439,8 +433,8 @@ def backtest(para_combination):
 
 if __name__ == '__main__':
 
-    start_date         = '2023-01-01'
-    end_date           = '2025-01-01'
+    start_date         = '2024-01-01'
+    end_date           = '2026-01-01'
 
     ### The stock you buy ###
     market             = 'HK' # HK or US
@@ -462,10 +456,10 @@ if __name__ == '__main__':
 
     num_of_core        = 16
 
-    code_list           = ['0939.HK']
-    benchmark_code_list = ['1398.HK']
-    # code_list           = ['KO']
-    # benchmark_code_list = ['PEP']
+    # code_list           = ['0939.HK']
+    # benchmark_code_list = ['1398.HK']
+    code_list           = ['PEP']
+    benchmark_code_list = ['KO']
 
     para_dict = {
         'code'                : code_list,
